@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CV Generator</title>
+    <style>
+        fieldset {
+            width: 50%;
+        }
+        .block {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<form action="CVGenerator.php" method="post">
+    <fieldset>
+        <legend>Personal Information:</legend>
+        <input type="text" id="firstName" name="firstName" placeholder="First Name" class="block"/>
+        <input type="text" id="lastName" name="lastName" placeholder="Last Name" class="block"/>
+        <input type="text" id="email" name="email" placeholder="Email" class="block"/>
+        <input type="text" id="phone" name="phone" placeholder="Phone Number" class="block"/>
+        <label for="femaleRadio">Female</label>
+        <input type="radio" id="femaleRadio" name="sex" value="female">
+        <label for="maleRadio">Male</label>
+        <input type="radio" id="maleRadio" name="sex" value="male"><br/>
+        <label for="birthdate">Birth Date</label><br/>
+        <input type="date" id="birthdate" name="birthdate"/><br/>
+        <label for="nation">Nationality</label><br/>
+        <select id="nation" name="nat">
+            <option value="Bulgarian">Bulgarian</option>
+            <option value="American">American</option>
+            <option value="Pernichian">Pernichian</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Last Work Position</legend>
+        <label for="company">Company Name</label>
+        <input type="text" id="company" name="company"/><br/>
+        <label for="from">From</label>
+        <input type="date" id="from" name="from"/><br/>
+        <label for="to">To</label>
+        <input type="date" id="to" name="to"/>
+    </fieldset>
+    <fieldset>
+        <legend>Computer Skills</legend>
+        <label for="progLang">Programming Languages</label><br/>
+        <input type="text" id="progLang" name="progLang"/>
+        <select id="progLangSelect" name="progLangSelect">
+            <option value="beg">Beginner</option>
+            <option value="ex">Expert</option>
+            <option value="gand">Gandalf</option>
+        </select><br/>
+        <button type="button">Remove Language</button>
+        <button type="button">Add Language</button>
+    </fieldset>
+    <fieldset>
+        <legend>Other Skills</legend>
+        <label for="lang">Languages</label><br/>
+        <input type="text" id="lang" name="lang"/>
+        <select id="comp" name="comp">
+            <option value="" selected disabled>-Comprehension-</option>
+            <option value="litt">A little</option>
+            <option value="more">A little more</option>
+            <option value="wut">Wut comprehiansion?</option>
+        </select>
+        <select id="read" name="read">
+            <option value="" selected disabled>-Reading-</option>
+            <option value="books">Books</option>
+            <option value="comics">Comics</option>
+            <option value="tv">I prefer watching TV</option>
+        </select>
+        <select id="write" name="write">
+            <option value="" selected disabled>-Writing-</option>
+            <option value="let">Letters</option>
+        </select>
+        <button type="button">Remove Language</button>
+        <button type="button">Add Language</button><br/>
+        <label>Drivers License</label><br/>
+        <label for="b">B</label>
+        <input type="checkbox" id="b" name="license[]" value="B"/>
+        <label for="a">A</label>
+        <input type="checkbox" id="a" name="license[]" value="A"/>
+        <label for="c">C</label>
+        <input type="checkbox" id="c" name="license[]" value="C"/>
+    </fieldset>
+    <button type="submit" name="submit">Generate CV</button>
+</form>
+</body>
+</html>
